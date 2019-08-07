@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="5512" started-at="2019-08-07T20:09:54Z" finished-at="2019-08-07T20:09:59Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(Utility.cucumber.api.testng.PickleEventWrapper, Utility.cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunnerClass.TestRunner@457e2f02]" name="runScenario" class="Utility.cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test" duration-ms="5512" started-at="2019-08-07T20:09:54Z" finished-at="2019-08-07T20:09:59Z">
+      <class name="RunnerClass.TestRunner">
+        <test-method status="PASS" signature="loggerProperties()[pri:0, instance:RunnerClass.TestRunner@457e2f02]" name="loggerProperties" is-config="true" duration-ms="91" started-at="2019-08-07T20:09:53Z" finished-at="2019-08-07T20:09:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loggerProperties -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunnerClass.TestRunner@457e2f02]" name="setUpClass" is-config="true" duration-ms="733" started-at="2019-08-07T20:09:54Z" finished-at="2019-08-07T20:09:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(Utility.cucumber.api.testng.PickleEventWrapper, Utility.cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunnerClass.TestRunner@457e2f02]" name="runScenario" duration-ms="3798" started-at="2019-08-07T20:09:54Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-07T20:09:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Hotel details Get request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotel details webservices with Get Method"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="runScenario(Utility.cucumber.api.testng.PickleEventWrapper, Utility.cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunnerClass.TestRunner@457e2f02]" name="runScenario" duration-ms="681" started-at="2019-08-07T20:09:58Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2019-08-07T20:09:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Hotel details Post request"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Hotel details webservices with Post Method"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunnerClass.TestRunner@457e2f02]" name="tearDownClass" is-config="true" duration-ms="155" started-at="2019-08-07T20:09:59Z" finished-at="2019-08-07T20:09:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- RunnerClass.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
