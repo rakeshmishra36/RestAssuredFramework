@@ -1,0 +1,264 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-07T20:09:55.154Z",
+        "line": 6,
+        "name": "Hotel details Get request",
+        "description": "",
+        "id": "hotel-details-webservices-with-get-method;hotel-details-get-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 663632811,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User provides environment and EndPoint details along with body",
+            "match": {
+              "location": "GetHotelTest.user_provides_environment_and_EndPoint_details_along_with_body()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2930010250,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User submits a Rest webservice request with Get Method",
+            "match": {
+              "location": "GetHotelTest.Get_Rest_webservice_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2718058,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify status code of response",
+            "match": {
+              "location": "GetHotelTest.verify_Existing_Patient_Account_Message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 354424,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Verify status line of response",
+            "match": {
+              "location": "GetHotelTest.verify_Application_is_closed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 272485,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Verify contentType of response",
+            "match": {
+              "location": "GetHotelTest.verify_contentType_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 720000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Verify header value of response",
+            "match": {
+              "location": "GetHotelTest.verify_header_value_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 894544,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Verify cookies of response",
+            "match": {
+              "location": "GetHotelTest.verify_cookies_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1047272,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Verify detailedCookies of response",
+            "match": {
+              "location": "GetHotelTest.verify_detailedCookies_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat StepDefinition.GetHotelTest.verify_data_of_the_body_of_response(GetHotelTest.java:77)\r\n\tat ✽.Verify data of the body of response(file:src/main/resources/FeatureFiles/getHotelDetails.feature:15)\r\n",
+              "duration": 2093573,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "Verify data of the body of response",
+            "match": {
+              "location": "GetHotelTest.verify_data_of_the_body_of_response()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Hotel details webservices with Get Method",
+    "description": "    In order to get hotel details\n    Submit hotel details Rest services with GET method",
+    "id": "hotel-details-webservices-with-get-method",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/FeatureFiles/getHotelDetails.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-08-07T20:09:58.761Z",
+        "line": 6,
+        "name": "Hotel details Post request",
+        "description": "",
+        "id": "hotel-details-webservices-with-post-method;hotel-details-post-request",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2514906,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User provides environment and EndPoint details along with body",
+            "match": {
+              "location": "GetHotelTest.user_provides_environment_and_EndPoint_details_along_with_body()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 676714496,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User submits a Rest webservice request with Post Method",
+            "match": {
+              "location": "GetHotelTest.Post_Rest_webservice_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:40)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
+              "duration": 1308605,
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "Verify status code of response",
+            "match": {
+              "location": "GetHotelTest.verify_Existing_Patient_Account_Message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8727,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "Verify status line of response",
+            "match": {
+              "location": "GetHotelTest.verify_Application_is_closed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1939,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "Verify contentType of response",
+            "match": {
+              "location": "GetHotelTest.verify_contentType_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1940,
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "Verify header value of response",
+            "match": {
+              "location": "GetHotelTest.verify_header_value_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1454,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Verify cookies of response",
+            "match": {
+              "location": "GetHotelTest.verify_cookies_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1454,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "Verify detailedCookies of response",
+            "match": {
+              "location": "GetHotelTest.verify_detailedCookies_of_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1455,
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "Verify data of the body of response",
+            "match": {
+              "location": "GetHotelTest.verify_data_of_the_body_of_response()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Hotel details webservices with Post Method",
+    "description": "  In order to get hotel details\n    Submit hotel details Rest services with GET method",
+    "id": "hotel-details-webservices-with-post-method",
+    "keyword": "Feature",
+    "uri": "file:src/main/resources/FeatureFiles/postHotelDetails.feature",
+    "tags": []
+  }
+]

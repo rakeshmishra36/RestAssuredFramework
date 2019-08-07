@@ -26,6 +26,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -60,20 +61,19 @@ public class CommonMethod {
 	public static List getTagValue;
 
 	public static String environment;
+	
+	public CommonMethod() {
+		logger = Logger.getLogger("ApplicationLog");		
+	}	
 
 	public void Setup() {
-		logger = Logger.getLogger("ApplicationLog");
-		String configFileName = "./src/main/resources/log4j.properties";
-		PropertyConfigurator.configure(configFileName);
 		getPropValues();
 		httpRequest = RestAssured.given();
 		environmentDetails(prop.getProperty("Environment"));
-
 	}
 
 	public void TearDown() throws IOException {
 		inputStream.close();
-
 	}
 
 	public void getPropValues() {
@@ -152,9 +152,7 @@ public class CommonMethod {
 		time = response.getTime();
 		System.out.println("Session Id => " + time);
 		return time;
-	}
-	
-	
+	}	
 
 	public String getContentType(Response response) {
 		contentType = response.contentType();
@@ -203,23 +201,16 @@ public class CommonMethod {
 		    } else if(response.getBody().path(xpath) instanceof Date) {
 		    	System.out.println("This is a Date");
 		        getTagValue = response.getBody().path(xpath);
-		    }*/
+		    }*/		
 		
-		
-		
-		 getTagValue = response.getBody().path(xpath);
+		getTagValue = response.getBody().path(xpath);
 		System.out.println("Tag Name : " + xpath + ",   Tag Value : " + getTagValue);
 		return getTagValue;
-	}
-	
-	
-	
+	}	
 	
 	public <T, U> List<U> getIntegerList(List<T> listOfString, Function<T, U> function) {
 		return listOfString.stream().map(function).collect(Collectors.toList());		
-	}
-	
-	
+	}	
 
 	public void getCellType(List<String> innerList, Row row, int j) {
 		switch (row.getCell(j).getCellType()) {
