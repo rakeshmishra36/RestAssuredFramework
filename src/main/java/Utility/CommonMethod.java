@@ -7,11 +7,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -28,6 +32,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
+import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -43,6 +48,8 @@ public class CommonMethod {
 	public static Logger logger;
 	public RequestSpecification requestSpec;
 	public RequestSpecification httpRequest;
+	private String sessionId;
+	private long time;
 
 	public static int statusCode;
 	public static String statusLine;
@@ -50,7 +57,7 @@ public class CommonMethod {
 	public static String headerKeyValue;
 	public static String cookies;
 	public static Cookies detailedCookies;
-	public static List<String> getTagValue;
+	public static List getTagValue;
 
 	public static String environment;
 
@@ -85,6 +92,14 @@ public class CommonMethod {
 		} catch (IOException e) {
 			System.out.println("Exception: " + e);
 		}
+	}
+	
+	public Response httpPostMethod(RequestSpecification requestSpec, File file, String uri) {
+		return RestAssured.given().spec(requestSpec).body(file).request(Method.POST, uri);
+	}
+	
+	public Response httpGetMethod(RequestSpecification requestSpec, String uri) {
+		return RestAssured.given().spec(requestSpec).request(Method.GET, uri);
 	}
 
 	public void environmentDetails(String env) {
@@ -126,6 +141,20 @@ public class CommonMethod {
 		System.out.println("Status Code => " + statusLine);
 		return statusLine;
 	}
+	
+	public String getSessionId(Response response) {
+		sessionId = response.getSessionId();
+		System.out.println("Session Id => " + sessionId);
+		return sessionId;
+	}
+	
+	public long getTime(Response response) {
+		time = response.getTime();
+		System.out.println("Session Id => " + time);
+		return time;
+	}
+	
+	
 
 	public String getContentType(Response response) {
 		contentType = response.contentType();
@@ -157,11 +186,40 @@ public class CommonMethod {
 		return detailedCookies;
 	}
 
-	public List<String> getResponseTagValue(Response response, String xpath) {
-		getTagValue = response.getBody().path(xpath);
+	public List getResponseTagValue(Response response, String xpath) {
+		
+		 /*if (response.getBody().path(xpath) instanceof Integer) {
+		        System.out.println("This is an Integer");
+		        getTagValue = response.getBody().path(xpath);
+		    } else if(response.getBody().path(xpath) instanceof String) {
+		        System.out.println("This is a String");
+		        getTagValue = response.getBody().path(xpath);
+		    } else if(response.getBody().path(xpath) instanceof Float) {
+		        System.out.println("This is a Float");
+		        getTagValue = response.getBody().path(xpath);
+		    } else if(response.getBody().path(xpath) instanceof Long) {
+		    	System.out.println("This is a Long");
+		        getTagValue = response.getBody().path(xpath);
+		    } else if(response.getBody().path(xpath) instanceof Date) {
+		    	System.out.println("This is a Date");
+		        getTagValue = response.getBody().path(xpath);
+		    }*/
+		
+		
+		
+		 getTagValue = response.getBody().path(xpath);
 		System.out.println("Tag Name : " + xpath + ",   Tag Value : " + getTagValue);
 		return getTagValue;
 	}
+	
+	
+	
+	
+	public <T, U> List<U> getIntegerList(List<T> listOfString, Function<T, U> function) {
+		return listOfString.stream().map(function).collect(Collectors.toList());		
+	}
+	
+	
 
 	public void getCellType(List<String> innerList, Row row, int j) {
 		switch (row.getCell(j).getCellType()) {
