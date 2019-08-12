@@ -51,9 +51,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                10,
-                2,
-                6,
+                11,
+                1,
+                5,
                 0,
                 0
             ],
@@ -94,7 +94,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 18) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 17) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -107,8 +107,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                0,
-                2
+                1,
+                1
             ],
             backgroundColor: [
                 "#00B000",
@@ -157,8 +157,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   0,
-                   2
+                   1,
+                   1
                ],
                backgroundColor: [
                 "#00B000",
@@ -234,7 +234,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Maven Framework POC</td>
               <td>1</td>
-            <td>07 Aug 2019, 16:10</td>
+            <td>11 Aug 2019, 23:45</td>
     </tr>
   </tbody>
 </table>
@@ -331,35 +331,35 @@ $(document).ready(function() {
           <tr>
         <td class="tagname"><a href="report-feature_file-src-main-resources-FeatureFiles-getHotelDetails-feature.html">Hotel details webservices with Get Method</a></td>
         
-        <td      class="passed"    >8</td>
-        <td      class="failed"    >1</td>
+        <td      class="passed"    >9</td>
+        <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td class="total">9</td>
 
+        <td  class="passed"    >1</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="3601743417">3.601</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="6103113598">6.103</td>
+        <td class="passed">Passed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-feature_file-src-main-resources-FeatureFiles-postHotelDetails-feature.html">Hotel details webservices with Post Method</a></td>
         
         <td      class="passed"    >2</td>
         <td      class="failed"    >1</td>
-        <td     class="skipped"   >6</td>
+        <td     class="skipped"   >5</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">9</td>
+        <td class="total">8</td>
 
         <td >0</td>
         <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="680554976">0.680</td>
+        <td class="duration" data-value="796150017">0.796</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
@@ -367,33 +367,33 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-            <td>10</td>
-      <td>2</td>
-      <td>6</td>
+            <td>11</td>
+      <td>1</td>
+      <td>5</td>
       <td>0</td>
       <td>0</td>
-      <td>18</td>
+      <td>17</td>
 
-      <td>0</td>
-      <td>2</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
 
-      <td class="duration">4.282</td>
+      <td class="duration">6.899</td>
       <td>2</td>
     </tr>
     <tr>
       <td></td>
-            <td>55.56%</td>
-      <td>11.11%</td>
-      <td>33.33%</td>
+            <td>64.71%</td>
+      <td>5.88%</td>
+      <td>29.41%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>0.00%</td>
-      <td>100.00%</td>
+      <td>50.00%</td>
+      <td>50.00%</td>
       <td></td>
       <td></td>
-      <td>0.00%</td>
+      <td>50.00%</td>
     </tr>
   </tfoot>
 </table>

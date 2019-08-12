@@ -97,8 +97,7 @@ formatter.match({
   "location": "GetHotelTest.verify_data_of_the_body_of_response()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat StepDefinition.GetHotelTest.verify_data_of_the_body_of_response(GetHotelTest.java:77)\r\n\tat ✽.Verify data of the body of response(file:src/main/resources/FeatureFiles/getHotelDetails.feature:15)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.uri("file:src/main/resources/FeatureFiles/postHotelDetails.feature");
 formatter.feature({
@@ -139,7 +138,7 @@ formatter.match({
   "location": "GetHotelTest.verify_Existing_Patient_Account_Message()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:40)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
+  "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:49)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
   "status": "failed"
 });
 formatter.step({
@@ -188,16 +187,6 @@ formatter.step({
 });
 formatter.match({
   "location": "GetHotelTest.verify_detailedCookies_of_response()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.step({
-  "name": "Verify data of the body of response",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "GetHotelTest.verify_data_of_the_body_of_response()"
 });
 formatter.result({
   "status": "skipped"
