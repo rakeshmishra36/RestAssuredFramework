@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-07T20:09:55.154Z",
+        "start_timestamp": "2019-08-12T03:45:29.039Z",
         "line": 6,
         "name": "Hotel details Get request",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 663632811,
+              "duration": 10459141,
               "status": "passed"
             },
             "line": 7,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 2930010250,
+              "duration": 4383032841,
               "status": "passed"
             },
             "line": 8,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 2718058,
+              "duration": 3744481,
               "status": "passed"
             },
             "line": 9,
@@ -49,7 +49,7 @@
           },
           {
             "result": {
-              "duration": 354424,
+              "duration": 426182,
               "status": "passed"
             },
             "line": 10,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 272485,
+              "duration": 466424,
               "status": "passed"
             },
             "line": 11,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 720000,
+              "duration": 822787,
               "status": "passed"
             },
             "line": 12,
@@ -85,7 +85,7 @@
           },
           {
             "result": {
-              "duration": 894544,
+              "duration": 1015272,
               "status": "passed"
             },
             "line": 13,
@@ -97,7 +97,7 @@
           },
           {
             "result": {
-              "duration": 1047272,
+              "duration": 1111756,
               "status": "passed"
             },
             "line": 14,
@@ -109,9 +109,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.NullPointerException\r\n\tat StepDefinition.GetHotelTest.verify_data_of_the_body_of_response(GetHotelTest.java:77)\r\n\tat ✽.Verify data of the body of response(file:src/main/resources/FeatureFiles/getHotelDetails.feature:15)\r\n",
-              "duration": 2093573,
-              "status": "failed"
+              "duration": 1702034714,
+              "status": "passed"
             },
             "line": 15,
             "name": "Verify data of the body of response",
@@ -134,7 +133,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2019-08-07T20:09:58.761Z",
+        "start_timestamp": "2019-08-12T03:45:35.150Z",
         "line": 6,
         "name": "Hotel details Post request",
         "description": "",
@@ -144,7 +143,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2514906,
+              "duration": 557090,
               "status": "passed"
             },
             "line": 7,
@@ -156,7 +155,7 @@
           },
           {
             "result": {
-              "duration": 676714496,
+              "duration": 791609900,
               "status": "passed"
             },
             "line": 8,
@@ -168,8 +167,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:40)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
-              "duration": 1308605,
+              "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:49)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
+              "duration": 3961694,
               "status": "failed"
             },
             "line": 9,
@@ -181,7 +180,7 @@
           },
           {
             "result": {
-              "duration": 8727,
+              "duration": 12122,
               "status": "skipped"
             },
             "line": 10,
@@ -193,7 +192,7 @@
           },
           {
             "result": {
-              "duration": 1939,
+              "duration": 2424,
               "status": "skipped"
             },
             "line": 11,
@@ -205,7 +204,7 @@
           },
           {
             "result": {
-              "duration": 1940,
+              "duration": 2424,
               "status": "skipped"
             },
             "line": 12,
@@ -217,7 +216,7 @@
           },
           {
             "result": {
-              "duration": 1454,
+              "duration": 1939,
               "status": "skipped"
             },
             "line": 13,
@@ -229,25 +228,13 @@
           },
           {
             "result": {
-              "duration": 1454,
+              "duration": 2424,
               "status": "skipped"
             },
             "line": 14,
             "name": "Verify detailedCookies of response",
             "match": {
               "location": "GetHotelTest.verify_detailedCookies_of_response()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1455,
-              "status": "skipped"
-            },
-            "line": 15,
-            "name": "Verify data of the body of response",
-            "match": {
-              "location": "GetHotelTest.verify_data_of_the_body_of_response()"
             },
             "keyword": "And "
           }

@@ -7,7 +7,6 @@ Utility\cucumber\api\testng\CucumberFeatureWrapper.class
 Utility\cucumber\api\testng\TestCaseResultListener$1.class
 Utility\cucumber\api\testng\TestCaseResultListener.class
 Utility\cucumber\api\testng\TestCaseResultListener$2.class
-StepDefinition\HotelTest.class
 Utility\cucumber\api\testng\PickleEventWrapperImpl.class
 StepDefinition\GetHotelTest.class
 Utility\cucumber\api\testng\CucumberFeatureWrapperImpl.class

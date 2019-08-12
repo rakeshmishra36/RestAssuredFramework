@@ -1,0 +1,18 @@
+{
+    "corporateAccountNumber": "954408789",
+    "currencyCode": "",
+    "endDate": "2019-08-09",
+    "hotelMnemonics": [
+        "ATLWS"
+    ],
+    "options": {
+        "offerIds": []
+    },
+    "product": {
+        "adults": 1,
+        "children": 0,
+        "quantity": 1
+    },
+    "rateCode": "6CBARC",
+    "startDate": "2019-08-04"
+}

@@ -1,12 +1,15 @@
 package RunnerClass;
 
-import org.apache.log4j.Logger;
+import java.util.Properties;
+
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.BeforeSuite;
 
+import Utility.CommonMethod;
 import Utility.cucumber.api.testng.AbstractTestNGCucumberTests;
 import cucumber.api.CucumberOptions;
-import Utility.CommonMethod;
+import io.restassured.RestAssured;
+import io.restassured.specification.RequestSpecification;
 
 @CucumberOptions(
 			features = "src/main/resources/FeatureFiles", 
@@ -25,10 +28,17 @@ import Utility.CommonMethod;
 		)
 public class TestRunner extends AbstractTestNGCucumberTests{
 	
-
+	public static CommonMethod commonMethod = new CommonMethod();;
+	public static RequestSpecification httpRequest;
+	public static Properties prop;
+	public static String environment;
+	
 	@BeforeSuite
 	public static void loggerProperties() {
 		String configFileName = "./src/main/resources/log4j.properties";
 		PropertyConfigurator.configure(configFileName);
+		prop = commonMethod.getPropValues();
+		httpRequest = RestAssured.given();
+		environment = commonMethod.environmentDetails(prop.getProperty("Environment"));
 	}
 }

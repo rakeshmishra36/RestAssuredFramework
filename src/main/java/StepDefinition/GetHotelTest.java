@@ -1,14 +1,23 @@
 package StepDefinition;
 
 import java.io.File;
+import java.text.DecimalFormat;
+import java.text.Format;
+import java.util.List;
+import java.math.*;
 
+import org.apache.commons.math3.util.Precision;
 import org.testng.Assert;
 
 import Utility.CommonMethod;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import static io.restassured.path.json.JsonPath.*;
 import io.restassured.response.Response;
+import static org.hamcrest.Matchers.*;
+
+
 
 public class GetHotelTest extends CommonMethod{
 	
@@ -73,9 +82,34 @@ public class GetHotelTest extends CommonMethod{
 
 	@Then("Verify data of the body of response")
 	public void verify_data_of_the_body_of_response() {
+		getResponseTagValue(response, "roomPhotos.attributeCode");
+		Assert.assertEquals(getTagValue.get(0), "K1QN");
+
 		getResponseTagValue(response, "address.city");
-	    Assert.assertEquals(getTagValue.get(0), "Atlanta");
-	    logger.info("Body data verified");
+		Assert.assertEquals(getTagValue.get(0), "Atlanta");
+		
+		getResponseTagValue(response, "address.postalCode");
+		int postal = Integer.parseInt(getTagValue.get(0).toString());
+		Assert.assertEquals(postal, 30338);
+		
+		getResponseTagValue(response, "address.lat");
+		float Actual = Float.parseFloat(getTagValue.get(0).toString());
+		Assert.assertEquals(Actual, 33.931834f);
+		
+		getResponseTagValue(response, "address.lng");
+		float lng = Float.parseFloat(getTagValue.get(0).toString());
+		Assert.assertEquals(lng, -84.344045f);
+		
+		getResponseTagValue(response, "address.distanceToCityCenter");
+		float distanceToCityCenter = Float.parseFloat(getTagValue.get(0).toString());
+		Assert.assertTrue(distanceToCityCenter > 0f);
+		
+		getResponseTagValue(response, "averageOverallRating");		
+		double averageOverallRating = Double.parseDouble(getTagValue.get(0).toString());
+		Assert.assertEquals(averageOverallRating, 4.7483444);	
+		
+		logger.info("Body data verified");
+		
 	}
 	
 }
