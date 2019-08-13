@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <testng-results failed="2" passed="0" skipped="0" total="2">
-<suite duration-ms="7428" name="cucumber.runtime.formatter.TestNGFormatter">
-<test duration-ms="7428" name="cucumber.runtime.formatter.TestNGFormatter">
+<suite duration-ms="8194" name="cucumber.runtime.formatter.TestNGFormatter">
+<test duration-ms="8194" name="cucumber.runtime.formatter.TestNGFormatter">
 <class name="Hotel details webservices with Get Method">
-<test-method duration-ms="6708" finished-at="2019-08-12T12:55:26Z" name="Hotel details Get request" started-at="2019-08-12T12:55:26Z" status="FAIL">
+<test-method duration-ms="7344" finished-at="2019-08-13T13:08:33Z" name="Hotel details Get request" started-at="2019-08-13T13:08:33Z" status="FAIL">
 <exception class="java.lang.IllegalArgumentException">
 <message><![CDATA[Given User provides environment and EndPoint details along with body........passed
 When User submits a Rest webservice request with Get Method.................passed
@@ -148,7 +148,7 @@ Script1.groovy: 1: unexpected token: *. @ line 1, column 44.
 </test-method>
 </class>
 <class name="Hotel details webservices with Post Method">
-<test-method duration-ms="720" finished-at="2019-08-12T12:55:26Z" name="Hotel details Post request" started-at="2019-08-12T12:55:26Z" status="FAIL">
+<test-method duration-ms="850" finished-at="2019-08-13T13:08:33Z" name="Hotel details Post request" started-at="2019-08-13T13:08:33Z" status="FAIL">
 <exception class="java.lang.AssertionError">
 <message><![CDATA[Given User provides environment and EndPoint details along with body........passed
 When User submits a Rest webservice request with Post Method................passed
@@ -166,7 +166,7 @@ And Verify detailedCookies of response......................................skip
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:652)
 	at org.testng.Assert.assertEquals(Assert.java:662)
-	at StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:51)
+	at StepDefinition.GetHotelTest.verify_Status_Code(GetHotelTest.java:51)
 	at ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)
 ]]></full-stacktrace>
 </exception>

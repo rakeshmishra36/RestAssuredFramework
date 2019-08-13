@@ -34,7 +34,7 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "GetHotelTest.verify_Existing_Patient_Account_Message()"
+  "location": "GetHotelTest.verify_Status_Code()"
 });
 formatter.result({
   "status": "passed"
@@ -136,10 +136,10 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.match({
-  "location": "GetHotelTest.verify_Existing_Patient_Account_Message()"
+  "location": "GetHotelTest.verify_Status_Code()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Existing_Patient_Account_Message(GetHotelTest.java:51)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
+  "error_message": "java.lang.AssertionError: expected [200] but found [422]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:652)\r\n\tat org.testng.Assert.assertEquals(Assert.java:662)\r\n\tat StepDefinition.GetHotelTest.verify_Status_Code(GetHotelTest.java:51)\r\n\tat ✽.Verify status code of response(file:src/main/resources/FeatureFiles/postHotelDetails.feature:9)\r\n",
   "status": "failed"
 });
 formatter.step({
