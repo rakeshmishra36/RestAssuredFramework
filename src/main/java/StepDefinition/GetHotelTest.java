@@ -13,6 +13,8 @@ import Utility.CommonMethod;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import groovy.json.*;
+
 import static io.restassured.path.json.JsonPath.*;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
@@ -44,7 +46,7 @@ public class GetHotelTest extends CommonMethod{
 	}
 
 	@Then("Verify status code of response")
-	public void verify_Existing_Patient_Account_Message() {
+	public void verify_Status_Code() {
 		statusCode = getStatusCode(response);
 		Assert.assertEquals(statusCode, 200);
 		logger.info("Status code verified");
@@ -107,6 +109,9 @@ public class GetHotelTest extends CommonMethod{
 		getResponseTagValue(response, "averageOverallRating");		
 		double averageOverallRating = Double.parseDouble(getTagValue.get(0).toString());
 		Assert.assertEquals(averageOverallRating, 4.7483444);	
+		
+		getResponseTagValue(response, "secondaryRatings.*.Id");		
+		System.out.println("Rating values >>>> " + getTagValue); 
 		
 		logger.info("Body data verified");
 		
