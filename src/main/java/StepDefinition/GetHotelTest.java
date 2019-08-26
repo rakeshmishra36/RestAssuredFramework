@@ -1,25 +1,19 @@
 package StepDefinition;
 
 import java.io.File;
-import java.text.DecimalFormat;
-import java.text.Format;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-import java.math.*;
+import java.util.Map;
+import java.util.Map.Entry;
 
-import org.apache.commons.math3.util.Precision;
 import org.testng.Assert;
 
 import Utility.CommonMethod;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import groovy.json.*;
-
-import static io.restassured.path.json.JsonPath.*;
 import io.restassured.response.Response;
-import static org.hamcrest.Matchers.*;
-
-
 
 public class GetHotelTest extends CommonMethod{
 	
@@ -108,13 +102,39 @@ public class GetHotelTest extends CommonMethod{
 		
 		getResponseTagValue(response, "averageOverallRating");		
 		double averageOverallRating = Double.parseDouble(getTagValue.get(0).toString());
-		Assert.assertEquals(averageOverallRating, 4.7483444);	
+		Assert.assertEquals(averageOverallRating, 4.7483444);
 		
-		getResponseTagValue(response, "secondaryRatings.*.Id");		
-		System.out.println("Rating values >>>> " + getTagValue); 
+		System.out.println("Below is the response of Request");
+		System.out.println("================================\n");
 		
-		logger.info("Body data verified");
+		response.getBody().prettyPeek();
 		
-	}
-	
+		System.out.println("End of Response");
+		System.out.println("===============");	
+		
+
+		List<String> list = rawToJson(response).getList("imageGroups.WELCM.images.caption");
+		System.out.println("Value of list ======= " +list);
+		
+		
+		Map<String, Map> hashMap = rawToJson(response).getMap("secondaryRatings");
+
+		List labelList = new ArrayList();
+		for (Entry<String, Map> outer : hashMap.entrySet()) {
+			System.out.print(outer.getKey() + " >>> \n" + outer.getValue() + "\n");
+
+			Map<String, Object> hashMap2 = outer.getValue();
+
+			for (Entry<String, Object> inner : hashMap2.entrySet()) {
+				System.out.print(inner.getKey() + " >>> \n" + inner.getValue() + "\n");
+				if (inner.getKey().toString().equalsIgnoreCase("Label")) {
+					labelList.add(inner.getValue());
+					break;
+				}
+			}
+		}
+		System.out.println("Label Values for all >>> " + labelList);
+		
+		logger.info("Body data verified");		
+	}	
 }
