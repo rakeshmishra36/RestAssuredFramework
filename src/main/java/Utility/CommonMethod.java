@@ -28,6 +28,8 @@ import io.restassured.http.Cookies;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
 import io.restassured.http.Method;
+import io.restassured.path.json.JsonPath;
+import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -168,6 +170,18 @@ public class CommonMethod extends TestRunner {
 		System.out.println("Detailed Cookies => " + detailedCookies);
 		return detailedCookies;
 	}
+	
+	public static XmlPath rawToXML(Response r) {		
+		String respon=r.asString();
+		XmlPath x=new XmlPath(respon);
+		return x;		
+	}
+	
+	public static JsonPath rawToJson(Response r) { 
+		String respon=r.asString();
+		JsonPath x= new JsonPath(respon);
+		return x;
+	}
 
 	public Object getResponseTagValue(Response response, String xpath) {
 		
@@ -177,12 +191,8 @@ public class CommonMethod extends TestRunner {
 			String temp = response.getBody().path(xpath).toString();
 			getTagValue.clear();
 			getTagValue.add(temp);
-		/*} else if (response.getBody().path(xpath) instanceof Float) {
-			String temp = response.getBody().path(xpath).toString();
-			getTagValue.clear();
-			getTagValue.add(temp);*/
 		} else {
-			System.out.println("This is List");
+			System.out.println("This is Map");
 			getTagValue.clear();
 			getTagValue = response.getBody().path(xpath);
 		}

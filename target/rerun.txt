@@ -1,2 +1,0 @@
-file:src/main/resources/FeatureFiles/getHotelDetails.feature:6
-file:src/main/resources/FeatureFiles/postHotelDetails.feature:6
